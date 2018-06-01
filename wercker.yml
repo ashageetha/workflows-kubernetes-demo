@@ -56,7 +56,7 @@ release-build:
 push-debug:
   steps:
     - internal/docker-push:
-      repository: quay.io/wercker/workflows-kubernetes-demo
+      repository: quay.io/$DOCKER_USERNAME/workflows-kubernetes-demo
       username: $DOCKER_USERNAME
       password: $DOCKER_PASSWORD
       registry: quay.io
@@ -86,7 +86,7 @@ push-release:
 
     - internal/docker-push:
       disable-sync: true
-      repository: quay.io/ashageetha/workflows-kubernetes-demo
+      repository: quay.io/$DOCKER_USERNAME/workflows-kubernetes-demo
       username: $DOCKER_USERNAME
       password: $DOCKER_PASSWORD
       registry: quay.io
